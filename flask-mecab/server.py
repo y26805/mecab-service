@@ -1,6 +1,7 @@
 ﻿#!/bin/python3
 from flask import Flask, abort, jsonify, request
 from flask_cors import CORS
+import os
 
 import MeCab
 
@@ -47,4 +48,4 @@ def mecab_parse(sentence, dic='ipadic'):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 8080)), debug=True)
