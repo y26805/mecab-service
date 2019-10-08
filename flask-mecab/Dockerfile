@@ -14,11 +14,6 @@ RUN ./configure  --enable-utf8-only \
   && make install \
   && ldconfig
 
-WORKDIR /opt/mecab/mecab-ipadic
-RUN ./configure --with-charset=utf8 \
-  && make \
-  && make install
-
 WORKDIR /opt
 RUN git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git
 WORKDIR /opt/mecab-ipadic-neologd
