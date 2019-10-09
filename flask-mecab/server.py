@@ -17,7 +17,9 @@ def parse_neologd():
         abort(400)
 
     sentence = request.json['sentence']
-    results = mecab_parse(sentence)
+    results = []
+    for line in sentence:
+        results.append(mecab_parse(line))
 
     return mecab_response(200, messages[0], results, 'neologd')
 
