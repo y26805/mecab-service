@@ -8,7 +8,7 @@ import MeCab
 app = Flask(__name__)
 cors = CORS(app, resources={r"/mecab/*": {"origins": "*"}})
 
-messages = ['Success', 'Faild']
+messages = ['Success', 'Failed']
 
 
 @app.route('/mecab/v1/parse-neologd', methods=['POST'])
