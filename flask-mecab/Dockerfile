@@ -23,4 +23,7 @@ COPY . /opt/api
 WORKDIR /opt/api
 RUN pip3 install -r requirements.txt
 
+ENV PYTHONIOENCODING=utf-8
+ENV FLASK_ENV=development
+
 CMD ["python3", "server.py"]
