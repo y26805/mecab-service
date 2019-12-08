@@ -1,4 +1,9 @@
-# MeCab Webサービス
+# MeCab Web service
+
+Forked.
+Linked to Google Cloud Build, such that every time the code is updated, a new Docker image will be pushed to Google Container Registry (GCR). Cloud Run then pulls image from GCR.
+
+---
 
 docker-composeコマンドだけで起動できるMeCabサービス
 
